@@ -770,7 +770,7 @@ func (t *xsdDateTime) UnmarshalText(text []byte) error {
 	return _unmarshalTime(text, (*time.Time)(t), unmarshalTimeForamt)
 }
 func (t xsdDateTime) MarshalText() ([]byte, error) {
-	return []byte((time.Time)(t).Format(time.RFC3339)), nil
+	return []byte((time.Time)(t).Format(marshalTimeForamt)), nil
 }
 func (t xsdDateTime) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if (time.Time)(t).IsZero() {
