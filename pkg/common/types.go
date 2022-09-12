@@ -761,7 +761,7 @@ func _unmarshalTime(text []byte, t *time.Time, format string) (err error) {
 
 const (
 	unmarshalTimeForamt = "2006-01-02T15:04:05.999999999"
-	marshalTimeForamt   = "2006-01-02T15:04:05Z-07:00"
+	marshalTimeForamt   = "2006-01-02T15:04:05-07:00"
 )
 
 type xsdDateTime time.Time
